@@ -1,0 +1,41 @@
+
+html{
+    background-color: #161616;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    section{
+    width: 500px;
+    margin: 50px auto;
+    }
+    .face{
+    width: 400px;
+    height: 300px;
+    perspective: 700px;}
+    .front, .back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 700ms;
+    }
+    .front{
+    background: rgb(60, 183, 223);
+  
+    }
+    .back{
+    background-color: rgb(211, 38, 38);
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    z-index: 0;
+    }
+    
+    .face:hover .front{
+        transform: rotateY(180deg);
+        z-index: 0;
+    }
+    .face:hover .back{
+    transform: rotateY(0);
+z-index: 1 ;}
